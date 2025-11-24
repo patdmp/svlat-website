@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVLAT v3 – Results</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body onload="showResults()">
+  <header>
+    <h1>Scientific Visualization Literacy Assessment Test</h1>
+    <p>Results</p>
+  </header>
+  <main>
+    <section>
+      <h2>Your Score</h2>
+      <p>You answered <strong id="score">0</strong> out of <strong id="total">0</strong> questions correctly.</p>
+      <p>Thank you for participating in this pilot test.</p>
+      <button class="next-btn" onclick="restartTest()">Restart Test</button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> SVLAT Pilot. All rights reserved.</p>
+  </footer>
+  <script>
+    // Update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

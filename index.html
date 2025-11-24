@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SVLAT v3 Visualization Samples</title>
-  <!-- Link to the stylesheet in the same repository -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVLAT v3 – Pilot Test</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>SVLAT v3 Visualization Samples</h1>
-    <p>This page showcases two example visualizations from the SVLAT v3 project: one static image and one animation embedded from Google Drive.</p>
+    <h1>Scientific Visualization Literacy Assessment Test</h1>
+    <p>SVLAT v3 Pilot</p>
   </header>
   <main>
-    <section id="visualization-image">
-      <h2>Visualization 1: Static Image</h2>
-      <p>This example shows a static visualization saved from the SVLAT v3 slide deck.</p>
-      <!-- The image file will be uploaded to the repository alongside this HTML file -->
-      <img src="slide-01.png" alt="SVLAT visualization slide" />
-    </section>
-
-    <section id="visualization-video">
-      <h2>Visualization 2: Animated Video</h2>
-      <p>The animation is hosted on Google Drive. Replace <code>VIDEO_FILE_ID</code> with your actual file ID to embed your own animation.</p>
-      <div class="video-container">
-        <iframe src="https://drive.google.com/file/d/VIDEO_FILE_ID/preview" allowfullscreen></iframe>
-      </div>
+    <section>
+      <h2>Welcome</h2>
+      <p>
+        Welcome to the Scientific Visualization Literacy Assessment Test (SVLAT).
+        This pilot experience includes a short video-based exercise and an image-based exercise. After completing
+        the tasks, you will see your score showing how many questions you answered correctly.
+      </p>
+      <p>
+        When you are ready to begin, click the button below. Your progress will be tracked locally and no information is
+        sent to any server.
+      </p>
+      <button id="start-btn" onclick="resetScore(); window.location.href='video.html';">
+        Start Test
+      </button>
     </section>
   </main>
   <footer>
-    <p>&copy; <span id="year"></span> SVLAT Project. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> SVLAT Pilot. All rights reserved.</p>
   </footer>
   <script>
-    // Update the footer year automatically
+    // Update the footer year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

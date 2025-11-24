@@ -60,3 +60,36 @@ footer {
   background-color: #eee;
   color: #555;
 }
+
+/* Question and quiz styles */
+.question-container {
+  margin-top: 1rem;
+}
+
+.question {
+  margin-bottom: 1rem;
+}
+
+.question p {
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+}
+
+.question label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+button.next-btn {
+  background-color: #324376;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button.next-btn:hover {
+  background-color: #25305f;
+}
