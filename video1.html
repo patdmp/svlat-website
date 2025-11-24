@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVLAT v3 – Video Quiz – Question 1</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Scientific Visualization Literacy Assessment Test</h1>
+    <p>Video Exercise</p>
+  </header>
+  <main>
+    <section>
+      <h2>Video Visualization Quiz – Question 1</h2>
+      <p>Please watch the animation below and answer the question.</p>
+      <div class="video-container">
+        <iframe src="https://drive.google.com/file/d/1NrCMkqZmZY_lsPbHfUDwK8h3dAuDqhA-/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <div class="question-container">
+        <div class="question">
+          <p>1. What shape is displayed in the animation?</p>
+          <label><input type="radio" name="v1" value="circle" data-correct="true" /> Circular ring</label>
+          <label><input type="radio" name="v1" value="square" /> Square grid</label>
+          <label><input type="radio" name="v1" value="triangle" /> Triangle shape</label>
+          <label><input type="radio" name="v1" value="line" /> Straight line</label>
+        </div>
+      </div>
+      <button class="next-btn" onclick="submitAnswer('video2.html')">Next</button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> SVLAT Pilot. All rights reserved.</p>
+  </footer>
+  <script>
+    // Update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

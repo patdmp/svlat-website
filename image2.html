@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVLAT v3 – Image Quiz – Question 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Scientific Visualization Literacy Assessment Test</h1>
+    <p>Image Exercise</p>
+  </header>
+  <main>
+    <section>
+      <h2>Image Visualization Quiz – Question 2</h2>
+      <p>Please examine the diagram below and answer the question.</p>
+      <img src="https://lh3.googleusercontent.com/d/1z1DEVhE7-vcAxLFzS5bF2cOLFyr8SLJQ=s0" alt="Dragonfly anatomy diagram" />
+      <div class="question-container">
+        <div class="question">
+          <p>2. How many wings are shown in the dragonfly diagram?</p>
+          <label><input type="radio" name="i2" value="1" /> 1</label>
+          <label><input type="radio" name="i2" value="2" /> 2</label>
+          <label><input type="radio" name="i2" value="3" /> 3</label>
+          <label><input type="radio" name="i2" value="4" data-correct="true" /> 4</label>
+        </div>
+      </div>
+      <button class="next-btn" onclick="submitAnswer('image3.html')">Next</button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> SVLAT Pilot. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

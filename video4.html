@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVLAT v3 – Video Quiz – Question 4</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Scientific Visualization Literacy Assessment Test</h1>
+    <p>Video Exercise</p>
+  </header>
+  <main>
+    <section>
+      <h2>Video Visualization Quiz – Question 4</h2>
+      <p>Please watch the animation below and answer the question.</p>
+      <div class="video-container">
+        <iframe src="https://drive.google.com/file/d/1NrCMkqZmZY_lsPbHfUDwK8h3dAuDqhA-/preview" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <div class="question-container">
+        <div class="question">
+          <p>4. How does the ring appear to change in the animation?</p>
+          <label><input type="radio" name="v4" value="rotates" data-correct="true" /> It rotates and pulses</label>
+          <label><input type="radio" name="v4" value="disappears" /> It disappears</label>
+          <label><input type="radio" name="v4" value="static" /> It remains static</label>
+          <label><input type="radio" name="v4" value="splits" /> It splits into two</label>
+        </div>
+      </div>
+      <button class="next-btn" onclick="submitAnswer('image1.html')">Next</button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> SVLAT Pilot. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

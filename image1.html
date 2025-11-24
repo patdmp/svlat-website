@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVLAT v3 – Image Quiz – Question 1</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Scientific Visualization Literacy Assessment Test</h1>
+    <p>Image Exercise</p>
+  </header>
+  <main>
+    <section>
+      <h2>Image Visualization Quiz – Question 1</h2>
+      <p>Please examine the diagram below and answer the question.</p>
+      <img src="https://lh3.googleusercontent.com/d/1z1DEVhE7-vcAxLFzS5bF2cOLFyr8SLJQ=s0" alt="Dragonfly anatomy diagram" />
+      <div class="question-container">
+        <div class="question">
+          <p>1. Which part of the dragonfly is labeled as the primary sensory organ for vision?</p>
+          <label><input type="radio" name="i1" value="antenna" /> Antenna</label>
+          <label><input type="radio" name="i1" value="compound_eye" data-correct="true" /> Compound eye</label>
+          <label><input type="radio" name="i1" value="wing" /> Wing</label>
+          <label><input type="radio" name="i1" value="abdomen" /> Abdomen</label>
+        </div>
+      </div>
+      <button class="next-btn" onclick="submitAnswer('image2.html')">Next</button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> SVLAT Pilot. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

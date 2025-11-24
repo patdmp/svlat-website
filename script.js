@@ -5,35 +5,24 @@ function resetScore() {
   localStorage.setItem('score', '0');
 }
 
-// Submit answers from the video page
-function submitVideoAnswers() {
-  let scoreIncrement = 0;
-  // Get all checked radio inputs on the page
-  const selected = document.querySelectorAll('input[type="radio"]:checked');
-  selected.forEach((input) => {
-    if (input.dataset.correct === 'true') {
-      scoreIncrement += 1;
-    }
-  });
-  // Update score in localStorage
-  const currentScore = parseInt(localStorage.getItem('score') || '0', 10);
-  localStorage.setItem('score', (currentScore + scoreIncrement).toString());
-  // Navigate to the image quiz page
-  window.location.href = 'image.html';
+// Submit answer on a question page and navigate to the next page
+function submitAnswer(nextPage) {
+  // Find the selected radio button
+  const selected = document.querySelector('input[type="radio"]:checked');
+  if (selected && selected.dataset.correct === 'true') {
+    const currentScore = parseInt(localStorage.getItem('score') || '0', 10);
+    localStorage.setItem('score', (currentScore + 1).toString());
+  }
+  // Navigate to the next page
+  window.location.href = nextPage;
 }
 
-// Submit answers from the image page
+// Legacy functions retained for backward compatibility but no longer used
+function submitVideoAnswers() {
+  submitAnswer('image1.html');
+}
 function submitImageAnswers() {
-  let scoreIncrement = 0;
-  const selected = document.querySelectorAll('input[type="radio"]:checked');
-  selected.forEach((input) => {
-    if (input.dataset.correct === 'true') {
-      scoreIncrement += 1;
-    }
-  });
-  const currentScore = parseInt(localStorage.getItem('score') || '0', 10);
-  localStorage.setItem('score', (currentScore + scoreIncrement).toString());
-  window.location.href = 'results.html';
+  submitAnswer('results.html');
 }
 
 // Show results on the results page
