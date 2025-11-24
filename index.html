@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVLAT v3 Visualization Samples</title>
+  <!-- Link to the stylesheet in the same repository -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SVLAT v3 Visualization Samples</h1>
+    <p>This page showcases two example visualizations from the SVLAT v3 project: one static image and one animation embedded from Google Drive.</p>
+  </header>
+  <main>
+    <section id="visualization-image">
+      <h2>Visualization 1: Static Image</h2>
+      <p>This example shows a static visualization saved from the SVLAT v3 slide deck.</p>
+      <!-- The image file will be uploaded to the repository alongside this HTML file -->
+      <img src="slide-01.png" alt="SVLAT visualization slide" />
+    </section>
+
+    <section id="visualization-video">
+      <h2>Visualization 2: Animated Video</h2>
+      <p>The animation is hosted on Google Drive. Replace <code>VIDEO_FILE_ID</code> with your actual file ID to embed your own animation.</p>
+      <div class="video-container">
+        <iframe src="https://drive.google.com/file/d/VIDEO_FILE_ID/preview" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> SVLAT Project. All rights reserved.</p>
+  </footer>
+  <script>
+    // Update the footer year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
